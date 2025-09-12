@@ -1,0 +1,983 @@
+[
+  {
+    "id": "g5mqk3srlb8ikx2v602q7tj6",
+    "name": "星宝",
+    "description": null,
+    "product": {
+      "id": "g5mqk3srlb8ikx2v602q7tj6",
+      "name": "星宝",
+      "description": "星宝AI 玩具",
+      "image": {
+        "fileName": "暂无记录.svg",
+        "filePath": "product/ni7fzp6jzjwe5l4ro3bnmm2t.svg",
+        "fileSize": 243920,
+        "fileType": "image/svg+xml"
+      },
+      "category": "2",
+      "settings": {
+        "secretKey": [
+          "123456"
+        ],
+        "protocolConfig": {
+          "supportedProtocolTypes": [
+            "WEBSOCKET"
+          ]
+        },
+        "sttProcessor": "VOSK",
+        "ttsProcessor": "EDGE"
+      }
+    },
+    "scenarios": [
+      {
+        "id": "vnzvwnqpqjvq6hqlma2rlfmh",
+        "name": "星宝:文本对话场景",
+        "description": null,
+        "product": {
+          "id": "g5mqk3srlb8ikx2v602q7tj6",
+          "name": "星宝",
+          "description": "星宝AI 玩具",
+          "image": {
+            "fileName": "暂无记录.svg",
+            "filePath": "product/ni7fzp6jzjwe5l4ro3bnmm2t.svg",
+            "fileSize": 243920,
+            "fileType": "image/svg+xml"
+          },
+          "category": "2",
+          "settings": {
+            "secretKey": [
+              "123456"
+            ],
+            "protocolConfig": {
+              "supportedProtocolTypes": [
+                "WEBSOCKET"
+              ]
+            },
+            "sttProcessor": "VOSK",
+            "ttsProcessor": "EDGE"
+          }
+        },
+        "scene": {
+          "id": "vnzvwnqpqjvq6hqlma2rlfmh",
+          "productId": "g5mqk3srlb8ikx2v602q7tj6",
+          "name": "文本对话场景",
+          "description": "文本对话场景",
+          "enable": true,
+          "whenThenList": [
+            {
+              "then": {
+                "id": "b0241vpck2r4bdlgzbq0wka7",
+                "name": "大模型处理",
+                "label": "大模型处理",
+                "type": "LLM_INFERENCE",
+                "modelProvider": "智谱 AI",
+                "model": "glm-4.5-flash",
+                "promptTemplate": "",
+                "promptVariables": [],
+                "temperature": 0.7,
+                "topP": 1,
+                "mcps": [],
+                "knowledgeBases": [
+                  {
+                    "id": "mnsdc5o5o8zs7p23g273d5rf",
+                    "priority": 1
+                  }
+                ],
+                "outputActions": [
+                  {
+                    "actionId": "ulgneracrnc7m043qtq75efz",
+                    "values": []
+                  },
+                  {
+                    "actionId": "q5d4mvx5ny6sq5e433o884y6",
+                    "values": []
+                  },
+                  {
+                    "actionId": "azut597xjedlphxqf3dejfm0",
+                    "values": []
+                  },
+                  {
+                    "actionId": "axbyqsoi2fc3haam1tewje85",
+                    "values": []
+                  },
+                  {
+                    "actionId": "q77kz4sl64zrlrxzq965xi9q",
+                    "values": []
+                  }
+                ]
+              },
+              "when": "\"{\\\"nodes\\\":[{\\\"name\\\":\\\"cuz1tpd7pkagblexaqtqdymx\\\",\\\"type\\\":\\\"ATOMIC\\\",\\\"quantifier\\\":{\\\"consumingStrategy\\\":\\\"STRICT\\\",\\\"innerConsumingStrategy\\\":\\\"SKIP_TILL_NEXT\\\",\\\"properties\\\":[\\\"SINGLE\\\"]},\\\"condition\\\":{\\\"type\\\":\\\"AVIATOR\\\",\\\"expression\\\":\\\"type == 'chat_text'\\\"},\\\"times\\\":null,\\\"window\\\":null,\\\"untilCondition\\\":null,\\\"afterMatchSkipStrategy\\\":{\\\"type\\\":\\\"SKIP_PAST_LAST_EVENT\\\",\\\"patternName\\\":null},\\\"graph\\\":null}],\\\"edges\\\":[]}\""
+            },
+            {
+              "then": {
+                "id": "vcd8hyf5zus3govmmvfsp409",
+                "name": "直接输出",
+                "label": "直接输出",
+                "type": "FORMAT_OUTPUT",
+                "modelProvider": null,
+                "model": null,
+                "promptTemplate": null,
+                "promptVariables": null,
+                "temperature": null,
+                "topP": null,
+                "mcps": null,
+                "knowledgeBases": null,
+                "outputActions": [
+                  {
+                    "actionId": "axbyqsoi2fc3haam1tewje85",
+                    "values": [
+                      {
+                        "fieldName": "text",
+                        "value": "who are you"
+                      }
+                    ]
+                  }
+                ]
+              },
+              "when": "\"{\\\"nodes\\\":[{\\\"name\\\":\\\"ldaedglqigo3immkknxje9g9\\\",\\\"type\\\":\\\"ATOMIC\\\",\\\"quantifier\\\":{\\\"consumingStrategy\\\":\\\"STRICT\\\",\\\"innerConsumingStrategy\\\":\\\"SKIP_TILL_NEXT\\\",\\\"properties\\\":[\\\"SINGLE\\\"]},\\\"condition\\\":{\\\"type\\\":\\\"AVIATOR\\\",\\\"expression\\\":\\\"type == 'chat_text'\\\"},\\\"times\\\":null,\\\"window\\\":null,\\\"untilCondition\\\":null,\\\"afterMatchSkipStrategy\\\":{\\\"type\\\":\\\"SKIP_PAST_LAST_EVENT\\\",\\\"patternName\\\":null},\\\"graph\\\":null}],\\\"edges\\\":[]}\""
+            }
+          ],
+          "flowDataPublishTime": "2025-09-11T04:25:58.871Z",
+          "prompt": "当前对话场景基于星宝玩具，该玩具与用户对话时注意敏感词，同时兼顾活泼与善意"
+        },
+        "testCases": [
+          {
+            "id": "b0241vpck2r4bdlgzbq0wka7",
+            "product": {
+              "id": "g5mqk3srlb8ikx2v602q7tj6",
+              "name": "星宝",
+              "description": "星宝AI 玩具",
+              "image": {
+                "fileName": "暂无记录.svg",
+                "filePath": "product/ni7fzp6jzjwe5l4ro3bnmm2t.svg",
+                "fileSize": 243920,
+                "fileType": "image/svg+xml"
+              },
+              "category": "2",
+              "settings": {
+                "secretKey": [
+                  "123456"
+                ],
+                "protocolConfig": {
+                  "supportedProtocolTypes": [
+                    "WEBSOCKET"
+                  ]
+                },
+                "sttProcessor": "VOSK",
+                "ttsProcessor": "EDGE"
+              }
+            },
+            "scene": {
+              "id": "vnzvwnqpqjvq6hqlma2rlfmh",
+              "productId": "g5mqk3srlb8ikx2v602q7tj6",
+              "name": "文本对话场景",
+              "description": "文本对话场景",
+              "enable": true,
+              "whenThenList": [
+                {
+                  "then": {
+                    "id": "b0241vpck2r4bdlgzbq0wka7",
+                    "name": "大模型处理",
+                    "label": "大模型处理",
+                    "type": "LLM_INFERENCE",
+                    "modelProvider": "智谱 AI",
+                    "model": "glm-4.5-flash",
+                    "promptTemplate": "",
+                    "promptVariables": [],
+                    "temperature": 0.7,
+                    "topP": 1,
+                    "mcps": [],
+                    "knowledgeBases": [
+                      {
+                        "id": "mnsdc5o5o8zs7p23g273d5rf",
+                        "priority": 1
+                      }
+                    ],
+                    "outputActions": [
+                      {
+                        "actionId": "ulgneracrnc7m043qtq75efz",
+                        "values": []
+                      },
+                      {
+                        "actionId": "q5d4mvx5ny6sq5e433o884y6",
+                        "values": []
+                      },
+                      {
+                        "actionId": "azut597xjedlphxqf3dejfm0",
+                        "values": []
+                      },
+                      {
+                        "actionId": "axbyqsoi2fc3haam1tewje85",
+                        "values": []
+                      },
+                      {
+                        "actionId": "q77kz4sl64zrlrxzq965xi9q",
+                        "values": []
+                      }
+                    ]
+                  },
+                  "when": "\"{\\\"nodes\\\":[{\\\"name\\\":\\\"cuz1tpd7pkagblexaqtqdymx\\\",\\\"type\\\":\\\"ATOMIC\\\",\\\"quantifier\\\":{\\\"consumingStrategy\\\":\\\"STRICT\\\",\\\"innerConsumingStrategy\\\":\\\"SKIP_TILL_NEXT\\\",\\\"properties\\\":[\\\"SINGLE\\\"]},\\\"condition\\\":{\\\"type\\\":\\\"AVIATOR\\\",\\\"expression\\\":\\\"type == 'chat_text'\\\"},\\\"times\\\":null,\\\"window\\\":null,\\\"untilCondition\\\":null,\\\"afterMatchSkipStrategy\\\":{\\\"type\\\":\\\"SKIP_PAST_LAST_EVENT\\\",\\\"patternName\\\":null},\\\"graph\\\":null}],\\\"edges\\\":[]}\""
+                },
+                {
+                  "then": {
+                    "id": "vcd8hyf5zus3govmmvfsp409",
+                    "name": "直接输出",
+                    "label": "直接输出",
+                    "type": "FORMAT_OUTPUT",
+                    "modelProvider": null,
+                    "model": null,
+                    "promptTemplate": null,
+                    "promptVariables": null,
+                    "temperature": null,
+                    "topP": null,
+                    "mcps": null,
+                    "knowledgeBases": null,
+                    "outputActions": [
+                      {
+                        "actionId": "axbyqsoi2fc3haam1tewje85",
+                        "values": [
+                          {
+                            "fieldName": "text",
+                            "value": "who are you"
+                          }
+                        ]
+                      }
+                    ]
+                  },
+                  "when": "\"{\\\"nodes\\\":[{\\\"name\\\":\\\"ldaedglqigo3immkknxje9g9\\\",\\\"type\\\":\\\"ATOMIC\\\",\\\"quantifier\\\":{\\\"consumingStrategy\\\":\\\"STRICT\\\",\\\"innerConsumingStrategy\\\":\\\"SKIP_TILL_NEXT\\\",\\\"properties\\\":[\\\"SINGLE\\\"]},\\\"condition\\\":{\\\"type\\\":\\\"AVIATOR\\\",\\\"expression\\\":\\\"type == 'chat_text'\\\"},\\\"times\\\":null,\\\"window\\\":null,\\\"untilCondition\\\":null,\\\"afterMatchSkipStrategy\\\":{\\\"type\\\":\\\"SKIP_PAST_LAST_EVENT\\\",\\\"patternName\\\":null},\\\"graph\\\":null}],\\\"edges\\\":[]}\""
+                }
+              ],
+              "flowDataPublishTime": "2025-09-11T04:25:58.871Z",
+              "prompt": "当前对话场景基于星宝玩具，该玩具与用户对话时注意敏感词，同时兼顾活泼与善意"
+            },
+            "name": "文本对话场景:大模型处理",
+            "whenThen": {
+              "then": {
+                "id": "b0241vpck2r4bdlgzbq0wka7",
+                "name": "大模型处理",
+                "label": "大模型处理",
+                "type": "LLM_INFERENCE",
+                "modelProvider": "智谱 AI",
+                "model": "glm-4.5-flash",
+                "promptTemplate": "",
+                "promptVariables": [],
+                "temperature": 0.7,
+                "topP": 1,
+                "mcps": [],
+                "knowledgeBases": [
+                  {
+                    "id": "mnsdc5o5o8zs7p23g273d5rf",
+                    "priority": 1
+                  }
+                ],
+                "outputActions": [
+                  {
+                    "actionId": "ulgneracrnc7m043qtq75efz",
+                    "values": []
+                  },
+                  {
+                    "actionId": "q5d4mvx5ny6sq5e433o884y6",
+                    "values": []
+                  },
+                  {
+                    "actionId": "azut597xjedlphxqf3dejfm0",
+                    "values": []
+                  },
+                  {
+                    "actionId": "axbyqsoi2fc3haam1tewje85",
+                    "values": []
+                  },
+                  {
+                    "actionId": "q77kz4sl64zrlrxzq965xi9q",
+                    "values": []
+                  }
+                ]
+              },
+              "when": "\"{\\\"nodes\\\":[{\\\"name\\\":\\\"cuz1tpd7pkagblexaqtqdymx\\\",\\\"type\\\":\\\"ATOMIC\\\",\\\"quantifier\\\":{\\\"consumingStrategy\\\":\\\"STRICT\\\",\\\"innerConsumingStrategy\\\":\\\"SKIP_TILL_NEXT\\\",\\\"properties\\\":[\\\"SINGLE\\\"]},\\\"condition\\\":{\\\"type\\\":\\\"AVIATOR\\\",\\\"expression\\\":\\\"type == 'chat_text'\\\"},\\\"times\\\":null,\\\"window\\\":null,\\\"untilCondition\\\":null,\\\"afterMatchSkipStrategy\\\":{\\\"type\\\":\\\"SKIP_PAST_LAST_EVENT\\\",\\\"patternName\\\":null},\\\"graph\\\":null}],\\\"edges\\\":[]}\""
+            },
+            "testUnits": [
+              {
+                "id": "a133bd73-7058-4840-a62d-17a28f460346",
+                "mode": "NEGATIVE_MATCH",
+                "product": {
+                  "id": "g5mqk3srlb8ikx2v602q7tj6",
+                  "name": "星宝",
+                  "description": "星宝AI 玩具",
+                  "image": {
+                    "fileName": "暂无记录.svg",
+                    "filePath": "product/ni7fzp6jzjwe5l4ro3bnmm2t.svg",
+                    "fileSize": 243920,
+                    "fileType": "image/svg+xml"
+                  },
+                  "category": "2",
+                  "settings": {
+                    "secretKey": [
+                      "123456"
+                    ],
+                    "protocolConfig": {
+                      "supportedProtocolTypes": [
+                        "WEBSOCKET"
+                      ]
+                    },
+                    "sttProcessor": "VOSK",
+                    "ttsProcessor": "EDGE"
+                  }
+                },
+                "scene": {
+                  "id": "vnzvwnqpqjvq6hqlma2rlfmh",
+                  "productId": "g5mqk3srlb8ikx2v602q7tj6",
+                  "name": "文本对话场景",
+                  "description": "文本对话场景",
+                  "enable": true,
+                  "whenThenList": [
+                    {
+                      "then": {
+                        "id": "b0241vpck2r4bdlgzbq0wka7",
+                        "name": "大模型处理",
+                        "label": "大模型处理",
+                        "type": "LLM_INFERENCE",
+                        "modelProvider": "智谱 AI",
+                        "model": "glm-4.5-flash",
+                        "promptTemplate": "",
+                        "promptVariables": [],
+                        "temperature": 0.7,
+                        "topP": 1,
+                        "mcps": [],
+                        "knowledgeBases": [
+                          {
+                            "id": "mnsdc5o5o8zs7p23g273d5rf",
+                            "priority": 1
+                          }
+                        ],
+                        "outputActions": [
+                          {
+                            "actionId": "ulgneracrnc7m043qtq75efz",
+                            "values": []
+                          },
+                          {
+                            "actionId": "q5d4mvx5ny6sq5e433o884y6",
+                            "values": []
+                          },
+                          {
+                            "actionId": "azut597xjedlphxqf3dejfm0",
+                            "values": []
+                          },
+                          {
+                            "actionId": "axbyqsoi2fc3haam1tewje85",
+                            "values": []
+                          },
+                          {
+                            "actionId": "q77kz4sl64zrlrxzq965xi9q",
+                            "values": []
+                          }
+                        ]
+                      },
+                      "when": "\"{\\\"nodes\\\":[{\\\"name\\\":\\\"cuz1tpd7pkagblexaqtqdymx\\\",\\\"type\\\":\\\"ATOMIC\\\",\\\"quantifier\\\":{\\\"consumingStrategy\\\":\\\"STRICT\\\",\\\"innerConsumingStrategy\\\":\\\"SKIP_TILL_NEXT\\\",\\\"properties\\\":[\\\"SINGLE\\\"]},\\\"condition\\\":{\\\"type\\\":\\\"AVIATOR\\\",\\\"expression\\\":\\\"type == 'chat_text'\\\"},\\\"times\\\":null,\\\"window\\\":null,\\\"untilCondition\\\":null,\\\"afterMatchSkipStrategy\\\":{\\\"type\\\":\\\"SKIP_PAST_LAST_EVENT\\\",\\\"patternName\\\":null},\\\"graph\\\":null}],\\\"edges\\\":[]}\""
+                    },
+                    {
+                      "then": {
+                        "id": "vcd8hyf5zus3govmmvfsp409",
+                        "name": "直接输出",
+                        "label": "直接输出",
+                        "type": "FORMAT_OUTPUT",
+                        "modelProvider": null,
+                        "model": null,
+                        "promptTemplate": null,
+                        "promptVariables": null,
+                        "temperature": null,
+                        "topP": null,
+                        "mcps": null,
+                        "knowledgeBases": null,
+                        "outputActions": [
+                          {
+                            "actionId": "axbyqsoi2fc3haam1tewje85",
+                            "values": [
+                              {
+                                "fieldName": "text",
+                                "value": "who are you"
+                              }
+                            ]
+                          }
+                        ]
+                      },
+                      "when": "\"{\\\"nodes\\\":[{\\\"name\\\":\\\"ldaedglqigo3immkknxje9g9\\\",\\\"type\\\":\\\"ATOMIC\\\",\\\"quantifier\\\":{\\\"consumingStrategy\\\":\\\"STRICT\\\",\\\"innerConsumingStrategy\\\":\\\"SKIP_TILL_NEXT\\\",\\\"properties\\\":[\\\"SINGLE\\\"]},\\\"condition\\\":{\\\"type\\\":\\\"AVIATOR\\\",\\\"expression\\\":\\\"type == 'chat_text'\\\"},\\\"times\\\":null,\\\"window\\\":null,\\\"untilCondition\\\":null,\\\"afterMatchSkipStrategy\\\":{\\\"type\\\":\\\"SKIP_PAST_LAST_EVENT\\\",\\\"patternName\\\":null},\\\"graph\\\":null}],\\\"edges\\\":[]}\""
+                    }
+                  ],
+                  "flowDataPublishTime": "2025-09-11T04:25:58.871Z",
+                  "prompt": "当前对话场景基于星宝玩具，该玩具与用户对话时注意敏感词，同时兼顾活泼与善意"
+                },
+                "inputEvents": [
+                  {
+                    "id": null,
+                    "type": "press_event",
+                    "terminalId": null,
+                    "payload": {
+                      "position": "head",
+                      "level": "high"
+                    }
+                  },
+                  {
+                    "id": null,
+                    "type": "press_event",
+                    "terminalId": null,
+                    "payload": {
+                      "position": "leg",
+                      "level": "mid"
+                    }
+                  },
+                  {
+                    "id": null,
+                    "type": "press_event",
+                    "terminalId": null,
+                    "payload": {
+                      "position": "head",
+                      "level": "low"
+                    }
+                  }
+                ],
+                "expectedActionIds": null,
+                "timeoutMs": 50000
+              },
+              {
+                "id": "8a260113-0b5f-4992-b25d-d8b3a216eb03",
+                "mode": "BOUNDARY_CONDITION",
+                "product": {
+                  "id": "g5mqk3srlb8ikx2v602q7tj6",
+                  "name": "星宝",
+                  "description": "星宝AI 玩具",
+                  "image": {
+                    "fileName": "暂无记录.svg",
+                    "filePath": "product/ni7fzp6jzjwe5l4ro3bnmm2t.svg",
+                    "fileSize": 243920,
+                    "fileType": "image/svg+xml"
+                  },
+                  "category": "2",
+                  "settings": {
+                    "secretKey": [
+                      "123456"
+                    ],
+                    "protocolConfig": {
+                      "supportedProtocolTypes": [
+                        "WEBSOCKET"
+                      ]
+                    },
+                    "sttProcessor": "VOSK",
+                    "ttsProcessor": "EDGE"
+                  }
+                },
+                "scene": {
+                  "id": "vnzvwnqpqjvq6hqlma2rlfmh",
+                  "productId": "g5mqk3srlb8ikx2v602q7tj6",
+                  "name": "文本对话场景",
+                  "description": "文本对话场景",
+                  "enable": true,
+                  "whenThenList": [
+                    {
+                      "then": {
+                        "id": "b0241vpck2r4bdlgzbq0wka7",
+                        "name": "大模型处理",
+                        "label": "大模型处理",
+                        "type": "LLM_INFERENCE",
+                        "modelProvider": "智谱 AI",
+                        "model": "glm-4.5-flash",
+                        "promptTemplate": "",
+                        "promptVariables": [],
+                        "temperature": 0.7,
+                        "topP": 1,
+                        "mcps": [],
+                        "knowledgeBases": [
+                          {
+                            "id": "mnsdc5o5o8zs7p23g273d5rf",
+                            "priority": 1
+                          }
+                        ],
+                        "outputActions": [
+                          {
+                            "actionId": "ulgneracrnc7m043qtq75efz",
+                            "values": []
+                          },
+                          {
+                            "actionId": "q5d4mvx5ny6sq5e433o884y6",
+                            "values": []
+                          },
+                          {
+                            "actionId": "azut597xjedlphxqf3dejfm0",
+                            "values": []
+                          },
+                          {
+                            "actionId": "axbyqsoi2fc3haam1tewje85",
+                            "values": []
+                          },
+                          {
+                            "actionId": "q77kz4sl64zrlrxzq965xi9q",
+                            "values": []
+                          }
+                        ]
+                      },
+                      "when": "\"{\\\"nodes\\\":[{\\\"name\\\":\\\"cuz1tpd7pkagblexaqtqdymx\\\",\\\"type\\\":\\\"ATOMIC\\\",\\\"quantifier\\\":{\\\"consumingStrategy\\\":\\\"STRICT\\\",\\\"innerConsumingStrategy\\\":\\\"SKIP_TILL_NEXT\\\",\\\"properties\\\":[\\\"SINGLE\\\"]},\\\"condition\\\":{\\\"type\\\":\\\"AVIATOR\\\",\\\"expression\\\":\\\"type == 'chat_text'\\\"},\\\"times\\\":null,\\\"window\\\":null,\\\"untilCondition\\\":null,\\\"afterMatchSkipStrategy\\\":{\\\"type\\\":\\\"SKIP_PAST_LAST_EVENT\\\",\\\"patternName\\\":null},\\\"graph\\\":null}],\\\"edges\\\":[]}\""
+                    },
+                    {
+                      "then": {
+                        "id": "vcd8hyf5zus3govmmvfsp409",
+                        "name": "直接输出",
+                        "label": "直接输出",
+                        "type": "FORMAT_OUTPUT",
+                        "modelProvider": null,
+                        "model": null,
+                        "promptTemplate": null,
+                        "promptVariables": null,
+                        "temperature": null,
+                        "topP": null,
+                        "mcps": null,
+                        "knowledgeBases": null,
+                        "outputActions": [
+                          {
+                            "actionId": "axbyqsoi2fc3haam1tewje85",
+                            "values": [
+                              {
+                                "fieldName": "text",
+                                "value": "who are you"
+                              }
+                            ]
+                          }
+                        ]
+                      },
+                      "when": "\"{\\\"nodes\\\":[{\\\"name\\\":\\\"ldaedglqigo3immkknxje9g9\\\",\\\"type\\\":\\\"ATOMIC\\\",\\\"quantifier\\\":{\\\"consumingStrategy\\\":\\\"STRICT\\\",\\\"innerConsumingStrategy\\\":\\\"SKIP_TILL_NEXT\\\",\\\"properties\\\":[\\\"SINGLE\\\"]},\\\"condition\\\":{\\\"type\\\":\\\"AVIATOR\\\",\\\"expression\\\":\\\"type == 'chat_text'\\\"},\\\"times\\\":null,\\\"window\\\":null,\\\"untilCondition\\\":null,\\\"afterMatchSkipStrategy\\\":{\\\"type\\\":\\\"SKIP_PAST_LAST_EVENT\\\",\\\"patternName\\\":null},\\\"graph\\\":null}],\\\"edges\\\":[]}\""
+                    }
+                  ],
+                  "flowDataPublishTime": "2025-09-11T04:25:58.871Z",
+                  "prompt": "当前对话场景基于星宝玩具，该玩具与用户对话时注意敏感词，同时兼顾活泼与善意"
+                },
+                "inputEvents": [
+                  {
+                    "id": null,
+                    "type": "chat_text",
+                    "terminalId": null,
+                    "payload": {
+                      "text": "Hi"
+                    }
+                  }
+                ],
+                "expectedActionIds": [
+                  "ulgneracrnc7m043qtq75efz",
+                  "q5d4mvx5ny6sq5e433o884y6",
+                  "azut597xjedlphxqf3dejfm0",
+                  "axbyqsoi2fc3haam1tewje85",
+                  "q77kz4sl64zrlrxzq965xi9q"
+                ],
+                "timeoutMs": 50000
+              }
+            ]
+          },
+          {
+            "id": "vcd8hyf5zus3govmmvfsp409",
+            "product": {
+              "id": "g5mqk3srlb8ikx2v602q7tj6",
+              "name": "星宝",
+              "description": "星宝AI 玩具",
+              "image": {
+                "fileName": "暂无记录.svg",
+                "filePath": "product/ni7fzp6jzjwe5l4ro3bnmm2t.svg",
+                "fileSize": 243920,
+                "fileType": "image/svg+xml"
+              },
+              "category": "2",
+              "settings": {
+                "secretKey": [
+                  "123456"
+                ],
+                "protocolConfig": {
+                  "supportedProtocolTypes": [
+                    "WEBSOCKET"
+                  ]
+                },
+                "sttProcessor": "VOSK",
+                "ttsProcessor": "EDGE"
+              }
+            },
+            "scene": {
+              "id": "vnzvwnqpqjvq6hqlma2rlfmh",
+              "productId": "g5mqk3srlb8ikx2v602q7tj6",
+              "name": "文本对话场景",
+              "description": "文本对话场景",
+              "enable": true,
+              "whenThenList": [
+                {
+                  "then": {
+                    "id": "b0241vpck2r4bdlgzbq0wka7",
+                    "name": "大模型处理",
+                    "label": "大模型处理",
+                    "type": "LLM_INFERENCE",
+                    "modelProvider": "智谱 AI",
+                    "model": "glm-4.5-flash",
+                    "promptTemplate": "",
+                    "promptVariables": [],
+                    "temperature": 0.7,
+                    "topP": 1,
+                    "mcps": [],
+                    "knowledgeBases": [
+                      {
+                        "id": "mnsdc5o5o8zs7p23g273d5rf",
+                        "priority": 1
+                      }
+                    ],
+                    "outputActions": [
+                      {
+                        "actionId": "ulgneracrnc7m043qtq75efz",
+                        "values": []
+                      },
+                      {
+                        "actionId": "q5d4mvx5ny6sq5e433o884y6",
+                        "values": []
+                      },
+                      {
+                        "actionId": "azut597xjedlphxqf3dejfm0",
+                        "values": []
+                      },
+                      {
+                        "actionId": "axbyqsoi2fc3haam1tewje85",
+                        "values": []
+                      },
+                      {
+                        "actionId": "q77kz4sl64zrlrxzq965xi9q",
+                        "values": []
+                      }
+                    ]
+                  },
+                  "when": "\"{\\\"nodes\\\":[{\\\"name\\\":\\\"cuz1tpd7pkagblexaqtqdymx\\\",\\\"type\\\":\\\"ATOMIC\\\",\\\"quantifier\\\":{\\\"consumingStrategy\\\":\\\"STRICT\\\",\\\"innerConsumingStrategy\\\":\\\"SKIP_TILL_NEXT\\\",\\\"properties\\\":[\\\"SINGLE\\\"]},\\\"condition\\\":{\\\"type\\\":\\\"AVIATOR\\\",\\\"expression\\\":\\\"type == 'chat_text'\\\"},\\\"times\\\":null,\\\"window\\\":null,\\\"untilCondition\\\":null,\\\"afterMatchSkipStrategy\\\":{\\\"type\\\":\\\"SKIP_PAST_LAST_EVENT\\\",\\\"patternName\\\":null},\\\"graph\\\":null}],\\\"edges\\\":[]}\""
+                },
+                {
+                  "then": {
+                    "id": "vcd8hyf5zus3govmmvfsp409",
+                    "name": "直接输出",
+                    "label": "直接输出",
+                    "type": "FORMAT_OUTPUT",
+                    "modelProvider": null,
+                    "model": null,
+                    "promptTemplate": null,
+                    "promptVariables": null,
+                    "temperature": null,
+                    "topP": null,
+                    "mcps": null,
+                    "knowledgeBases": null,
+                    "outputActions": [
+                      {
+                        "actionId": "axbyqsoi2fc3haam1tewje85",
+                        "values": [
+                          {
+                            "fieldName": "text",
+                            "value": "who are you"
+                          }
+                        ]
+                      }
+                    ]
+                  },
+                  "when": "\"{\\\"nodes\\\":[{\\\"name\\\":\\\"ldaedglqigo3immkknxje9g9\\\",\\\"type\\\":\\\"ATOMIC\\\",\\\"quantifier\\\":{\\\"consumingStrategy\\\":\\\"STRICT\\\",\\\"innerConsumingStrategy\\\":\\\"SKIP_TILL_NEXT\\\",\\\"properties\\\":[\\\"SINGLE\\\"]},\\\"condition\\\":{\\\"type\\\":\\\"AVIATOR\\\",\\\"expression\\\":\\\"type == 'chat_text'\\\"},\\\"times\\\":null,\\\"window\\\":null,\\\"untilCondition\\\":null,\\\"afterMatchSkipStrategy\\\":{\\\"type\\\":\\\"SKIP_PAST_LAST_EVENT\\\",\\\"patternName\\\":null},\\\"graph\\\":null}],\\\"edges\\\":[]}\""
+                }
+              ],
+              "flowDataPublishTime": "2025-09-11T04:25:58.871Z",
+              "prompt": "当前对话场景基于星宝玩具，该玩具与用户对话时注意敏感词，同时兼顾活泼与善意"
+            },
+            "name": "文本对话场景:直接输出",
+            "whenThen": {
+              "then": {
+                "id": "vcd8hyf5zus3govmmvfsp409",
+                "name": "直接输出",
+                "label": "直接输出",
+                "type": "FORMAT_OUTPUT",
+                "modelProvider": null,
+                "model": null,
+                "promptTemplate": null,
+                "promptVariables": null,
+                "temperature": null,
+                "topP": null,
+                "mcps": null,
+                "knowledgeBases": null,
+                "outputActions": [
+                  {
+                    "actionId": "axbyqsoi2fc3haam1tewje85",
+                    "values": [
+                      {
+                        "fieldName": "text",
+                        "value": "who are you"
+                      }
+                    ]
+                  }
+                ]
+              },
+              "when": "\"{\\\"nodes\\\":[{\\\"name\\\":\\\"ldaedglqigo3immkknxje9g9\\\",\\\"type\\\":\\\"ATOMIC\\\",\\\"quantifier\\\":{\\\"consumingStrategy\\\":\\\"STRICT\\\",\\\"innerConsumingStrategy\\\":\\\"SKIP_TILL_NEXT\\\",\\\"properties\\\":[\\\"SINGLE\\\"]},\\\"condition\\\":{\\\"type\\\":\\\"AVIATOR\\\",\\\"expression\\\":\\\"type == 'chat_text'\\\"},\\\"times\\\":null,\\\"window\\\":null,\\\"untilCondition\\\":null,\\\"afterMatchSkipStrategy\\\":{\\\"type\\\":\\\"SKIP_PAST_LAST_EVENT\\\",\\\"patternName\\\":null},\\\"graph\\\":null}],\\\"edges\\\":[]}\""
+            },
+            "testUnits": [
+              {
+                "id": "498e2be3-7d39-4fda-b079-75e6aa3a0f11",
+                "mode": "NEGATIVE_MATCH",
+                "product": {
+                  "id": "g5mqk3srlb8ikx2v602q7tj6",
+                  "name": "星宝",
+                  "description": "星宝AI 玩具",
+                  "image": {
+                    "fileName": "暂无记录.svg",
+                    "filePath": "product/ni7fzp6jzjwe5l4ro3bnmm2t.svg",
+                    "fileSize": 243920,
+                    "fileType": "image/svg+xml"
+                  },
+                  "category": "2",
+                  "settings": {
+                    "secretKey": [
+                      "123456"
+                    ],
+                    "protocolConfig": {
+                      "supportedProtocolTypes": [
+                        "WEBSOCKET"
+                      ]
+                    },
+                    "sttProcessor": "VOSK",
+                    "ttsProcessor": "EDGE"
+                  }
+                },
+                "scene": {
+                  "id": "vnzvwnqpqjvq6hqlma2rlfmh",
+                  "productId": "g5mqk3srlb8ikx2v602q7tj6",
+                  "name": "文本对话场景",
+                  "description": "文本对话场景",
+                  "enable": true,
+                  "whenThenList": [
+                    {
+                      "then": {
+                        "id": "b0241vpck2r4bdlgzbq0wka7",
+                        "name": "大模型处理",
+                        "label": "大模型处理",
+                        "type": "LLM_INFERENCE",
+                        "modelProvider": "智谱 AI",
+                        "model": "glm-4.5-flash",
+                        "promptTemplate": "",
+                        "promptVariables": [],
+                        "temperature": 0.7,
+                        "topP": 1,
+                        "mcps": [],
+                        "knowledgeBases": [
+                          {
+                            "id": "mnsdc5o5o8zs7p23g273d5rf",
+                            "priority": 1
+                          }
+                        ],
+                        "outputActions": [
+                          {
+                            "actionId": "ulgneracrnc7m043qtq75efz",
+                            "values": []
+                          },
+                          {
+                            "actionId": "q5d4mvx5ny6sq5e433o884y6",
+                            "values": []
+                          },
+                          {
+                            "actionId": "azut597xjedlphxqf3dejfm0",
+                            "values": []
+                          },
+                          {
+                            "actionId": "axbyqsoi2fc3haam1tewje85",
+                            "values": []
+                          },
+                          {
+                            "actionId": "q77kz4sl64zrlrxzq965xi9q",
+                            "values": []
+                          }
+                        ]
+                      },
+                      "when": "\"{\\\"nodes\\\":[{\\\"name\\\":\\\"cuz1tpd7pkagblexaqtqdymx\\\",\\\"type\\\":\\\"ATOMIC\\\",\\\"quantifier\\\":{\\\"consumingStrategy\\\":\\\"STRICT\\\",\\\"innerConsumingStrategy\\\":\\\"SKIP_TILL_NEXT\\\",\\\"properties\\\":[\\\"SINGLE\\\"]},\\\"condition\\\":{\\\"type\\\":\\\"AVIATOR\\\",\\\"expression\\\":\\\"type == 'chat_text'\\\"},\\\"times\\\":null,\\\"window\\\":null,\\\"untilCondition\\\":null,\\\"afterMatchSkipStrategy\\\":{\\\"type\\\":\\\"SKIP_PAST_LAST_EVENT\\\",\\\"patternName\\\":null},\\\"graph\\\":null}],\\\"edges\\\":[]}\""
+                    },
+                    {
+                      "then": {
+                        "id": "vcd8hyf5zus3govmmvfsp409",
+                        "name": "直接输出",
+                        "label": "直接输出",
+                        "type": "FORMAT_OUTPUT",
+                        "modelProvider": null,
+                        "model": null,
+                        "promptTemplate": null,
+                        "promptVariables": null,
+                        "temperature": null,
+                        "topP": null,
+                        "mcps": null,
+                        "knowledgeBases": null,
+                        "outputActions": [
+                          {
+                            "actionId": "axbyqsoi2fc3haam1tewje85",
+                            "values": [
+                              {
+                                "fieldName": "text",
+                                "value": "who are you"
+                              }
+                            ]
+                          }
+                        ]
+                      },
+                      "when": "\"{\\\"nodes\\\":[{\\\"name\\\":\\\"ldaedglqigo3immkknxje9g9\\\",\\\"type\\\":\\\"ATOMIC\\\",\\\"quantifier\\\":{\\\"consumingStrategy\\\":\\\"STRICT\\\",\\\"innerConsumingStrategy\\\":\\\"SKIP_TILL_NEXT\\\",\\\"properties\\\":[\\\"SINGLE\\\"]},\\\"condition\\\":{\\\"type\\\":\\\"AVIATOR\\\",\\\"expression\\\":\\\"type == 'chat_text'\\\"},\\\"times\\\":null,\\\"window\\\":null,\\\"untilCondition\\\":null,\\\"afterMatchSkipStrategy\\\":{\\\"type\\\":\\\"SKIP_PAST_LAST_EVENT\\\",\\\"patternName\\\":null},\\\"graph\\\":null}],\\\"edges\\\":[]}\""
+                    }
+                  ],
+                  "flowDataPublishTime": "2025-09-11T04:25:58.871Z",
+                  "prompt": "当前对话场景基于星宝玩具，该玩具与用户对话时注意敏感词，同时兼顾活泼与善意"
+                },
+                "inputEvents": [
+                  {
+                    "id": null,
+                    "type": "press_event",
+                    "terminalId": null,
+                    "payload": {
+                      "position": "head",
+                      "level": "high"
+                    }
+                  },
+                  {
+                    "id": null,
+                    "type": "press_event",
+                    "terminalId": null,
+                    "payload": {
+                      "position": "leg",
+                      "level": "mid"
+                    }
+                  },
+                  {
+                    "id": null,
+                    "type": "press_event",
+                    "terminalId": null,
+                    "payload": {
+                      "position": "head",
+                      "level": "low"
+                    }
+                  }
+                ],
+                "expectedActionIds": null,
+                "timeoutMs": 50000
+              },
+              {
+                "id": "92eb21c6-ab1a-49b4-9b46-33ab4226f293",
+                "mode": "BOUNDARY_CONDITION",
+                "product": {
+                  "id": "g5mqk3srlb8ikx2v602q7tj6",
+                  "name": "星宝",
+                  "description": "星宝AI 玩具",
+                  "image": {
+                    "fileName": "暂无记录.svg",
+                    "filePath": "product/ni7fzp6jzjwe5l4ro3bnmm2t.svg",
+                    "fileSize": 243920,
+                    "fileType": "image/svg+xml"
+                  },
+                  "category": "2",
+                  "settings": {
+                    "secretKey": [
+                      "123456"
+                    ],
+                    "protocolConfig": {
+                      "supportedProtocolTypes": [
+                        "WEBSOCKET"
+                      ]
+                    },
+                    "sttProcessor": "VOSK",
+                    "ttsProcessor": "EDGE"
+                  }
+                },
+                "scene": {
+                  "id": "vnzvwnqpqjvq6hqlma2rlfmh",
+                  "productId": "g5mqk3srlb8ikx2v602q7tj6",
+                  "name": "文本对话场景",
+                  "description": "文本对话场景",
+                  "enable": true,
+                  "whenThenList": [
+                    {
+                      "then": {
+                        "id": "b0241vpck2r4bdlgzbq0wka7",
+                        "name": "大模型处理",
+                        "label": "大模型处理",
+                        "type": "LLM_INFERENCE",
+                        "modelProvider": "智谱 AI",
+                        "model": "glm-4.5-flash",
+                        "promptTemplate": "",
+                        "promptVariables": [],
+                        "temperature": 0.7,
+                        "topP": 1,
+                        "mcps": [],
+                        "knowledgeBases": [
+                          {
+                            "id": "mnsdc5o5o8zs7p23g273d5rf",
+                            "priority": 1
+                          }
+                        ],
+                        "outputActions": [
+                          {
+                            "actionId": "ulgneracrnc7m043qtq75efz",
+                            "values": []
+                          },
+                          {
+                            "actionId": "q5d4mvx5ny6sq5e433o884y6",
+                            "values": []
+                          },
+                          {
+                            "actionId": "azut597xjedlphxqf3dejfm0",
+                            "values": []
+                          },
+                          {
+                            "actionId": "axbyqsoi2fc3haam1tewje85",
+                            "values": []
+                          },
+                          {
+                            "actionId": "q77kz4sl64zrlrxzq965xi9q",
+                            "values": []
+                          }
+                        ]
+                      },
+                      "when": "\"{\\\"nodes\\\":[{\\\"name\\\":\\\"cuz1tpd7pkagblexaqtqdymx\\\",\\\"type\\\":\\\"ATOMIC\\\",\\\"quantifier\\\":{\\\"consumingStrategy\\\":\\\"STRICT\\\",\\\"innerConsumingStrategy\\\":\\\"SKIP_TILL_NEXT\\\",\\\"properties\\\":[\\\"SINGLE\\\"]},\\\"condition\\\":{\\\"type\\\":\\\"AVIATOR\\\",\\\"expression\\\":\\\"type == 'chat_text'\\\"},\\\"times\\\":null,\\\"window\\\":null,\\\"untilCondition\\\":null,\\\"afterMatchSkipStrategy\\\":{\\\"type\\\":\\\"SKIP_PAST_LAST_EVENT\\\",\\\"patternName\\\":null},\\\"graph\\\":null}],\\\"edges\\\":[]}\""
+                    },
+                    {
+                      "then": {
+                        "id": "vcd8hyf5zus3govmmvfsp409",
+                        "name": "直接输出",
+                        "label": "直接输出",
+                        "type": "FORMAT_OUTPUT",
+                        "modelProvider": null,
+                        "model": null,
+                        "promptTemplate": null,
+                        "promptVariables": null,
+                        "temperature": null,
+                        "topP": null,
+                        "mcps": null,
+                        "knowledgeBases": null,
+                        "outputActions": [
+                          {
+                            "actionId": "axbyqsoi2fc3haam1tewje85",
+                            "values": [
+                              {
+                                "fieldName": "text",
+                                "value": "who are you"
+                              }
+                            ]
+                          }
+                        ]
+                      },
+                      "when": "\"{\\\"nodes\\\":[{\\\"name\\\":\\\"ldaedglqigo3immkknxje9g9\\\",\\\"type\\\":\\\"ATOMIC\\\",\\\"quantifier\\\":{\\\"consumingStrategy\\\":\\\"STRICT\\\",\\\"innerConsumingStrategy\\\":\\\"SKIP_TILL_NEXT\\\",\\\"properties\\\":[\\\"SINGLE\\\"]},\\\"condition\\\":{\\\"type\\\":\\\"AVIATOR\\\",\\\"expression\\\":\\\"type == 'chat_text'\\\"},\\\"times\\\":null,\\\"window\\\":null,\\\"untilCondition\\\":null,\\\"afterMatchSkipStrategy\\\":{\\\"type\\\":\\\"SKIP_PAST_LAST_EVENT\\\",\\\"patternName\\\":null},\\\"graph\\\":null}],\\\"edges\\\":[]}\""
+                    }
+                  ],
+                  "flowDataPublishTime": "2025-09-11T04:25:58.871Z",
+                  "prompt": "当前对话场景基于星宝玩具，该玩具与用户对话时注意敏感词，同时兼顾活泼与善意"
+                },
+                "inputEvents": [
+                  {
+                    "id": null,
+                    "type": "chat_text",
+                    "terminalId": null,
+                    "payload": {
+                      "text": "请问如何设置智能闹钟？"
+                    }
+                  }
+                ],
+                "expectedActionIds": [
+                  "axbyqsoi2fc3haam1tewje85"
+                ],
+                "timeoutMs": 50000
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+]

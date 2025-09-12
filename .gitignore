@@ -1,24 +1,189 @@
-# Compiled class file
+# ===========================================
+# Java 项目通用忽略文件
+# ===========================================
+
+# 编译产物
 *.class
-
-# Log file
-*.log
-
-# BlueJ files
-*.ctxt
-
-# Mobile Tools for Java (J2ME)
-.mtj.tmp/
-
-# Package Files #
 *.jar
 *.war
-*.nar
 *.ear
-*.zip
-*.tar.gz
-*.rar
+*.aar
 
-# virtual machine crash logs, see http://www.java.com/en/download/help/error_hotspot.xml
-hs_err_pid*
-replay_pid*
+# Maven 构建目录
+target/
+**/target/
+pom.xml.tag
+pom.xml.releaseBackup
+pom.xml.versionsBackup
+pom.xml.next
+release.properties
+dependency-reduced-pom.xml
+buildNumber.properties
+.mvn/timing.properties
+.mvn/wrapper/maven-wrapper.jar
+
+# ===========================================
+# IDE 相关
+# ===========================================
+
+# IntelliJ IDEA
+.idea/
+*.iws
+*.iml
+*.ipr
+out/
+.idea_modules/
+
+# Eclipse
+.metadata
+bin/
+tmp/
+*.tmp
+*.bak
+*.swp
+*~.nib
+local.properties
+.settings/
+.loadpath
+.recommenders
+.project
+.classpath
+.factorypath
+.buildpath
+.target
+
+# VS Code
+.vscode/
+*.code-workspace
+
+# NetBeans
+/nbproject/private/
+/nbbuild/
+/dist/
+/nbdist/
+/.nb-gradle/
+build/
+!**/src/main/**/build/
+!**/src/test/**/build/
+
+# ===========================================
+# 日志文件
+# ===========================================
+
+# 日志目录和文件
+logs/
+*.log
+log/
+spring.log
+
+# ===========================================
+# 系统和临时文件
+# ===========================================
+
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+Icon
+._*
+.DocumentRevisions-V100
+.fseventsd
+.Spotlight-V100
+.TemporaryItems
+.Trashes
+.VolumeIcon.icns
+.com.apple.timemachine.donotpresent
+.AppleDB
+.AppleDesktop
+Network Trash Folder
+Temporary Items
+.apdisk
+
+# Windows
+Thumbs.db
+Thumbs.db:encryptable
+ehthumbs.db
+ehthumbs_vista.db
+*.stackdump
+[Dd]esktop.ini
+$RECYCLE.BIN/
+*.cab
+*.msi
+*.msix
+*.msm
+*.msp
+*.lnk
+
+# Linux
+*~
+.fuse_hidden*
+.directory
+.Trash-*
+.nfs*
+
+# ===========================================
+# 开发工具相关
+# ===========================================
+
+# JRebel
+rebel.xml
+
+# SonarLint
+.sonarlint/
+
+# ===========================================
+# 数据库相关
+# ===========================================
+
+# H2 数据库文件
+*.db
+*.mv.db
+*.trace.db
+
+# ===========================================
+# Docker 相关
+# ===========================================
+
+# Docker
+.dockerignore
+docker-compose.override.yml
+
+# ===========================================
+# 配置和密钥文件
+# ===========================================
+
+# 环境变量文件
+.env
+.env.local
+.env.*.local
+
+# SSL证书
+*.p12
+*.jks
+*.keystore
+
+# ===========================================
+# 项目特定忽略
+# ===========================================
+
+# 数据目录（如果包含测试数据）
+data/temp/
+data/test/
+
+# 根目录运行时数据文件（精确忽略）
+/data
+/scene-mesh-facade/data
+
+
+# 上传文件目录
+uploads/
+files/
+
+# 本地配置文件备份
+*.bak
+*.backup
+
+# vosk model
+/scene-mesh-service/models
+
+qodana.yaml

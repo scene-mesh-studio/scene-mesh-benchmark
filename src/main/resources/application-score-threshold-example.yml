@@ -1,0 +1,31 @@
+# 分数阈值配置示例
+# 复制到 application.yml 或 application-{profile}.yml 中使用
+
+benchmark:
+  score-threshold:
+    # 默认成功阈值（可接受的最低分数）
+    default-success-threshold: 0.75
+    
+    # 分数等级阈值
+    excellent-threshold: 0.95
+    good-threshold: 0.85
+    acceptable-threshold: 0.75
+    poor-threshold: 0.60
+    
+    # 按测试模式配置的特定阈值
+    mode-thresholds:
+      # POSITIVE_MATCH 模式：期望匹配特定动作，要求较高精度
+      positive-match: 0.80
+      
+      # NEGATIVE_MATCH 模式：期望不匹配任何动作，要求极高精度
+      negative-match: 0.90
+      
+      # BOUNDARY_CONDITION 模式：边界条件测试，可以稍微宽松一些
+      boundary-condition: 0.75
+
+# 使用说明：
+# 1. 分数范围：0.0 - 1.0
+# 2. 分数计算：匹配动作数 / 期望动作数
+# 3. 成功判断：实际分数 >= 对应模式的阈值
+# 4. 报告展示：会显示分数等级（优秀/良好/可接受/较差/失败）
+# 5. 统计计算：基于配置的阈值计算通过率和失败率
