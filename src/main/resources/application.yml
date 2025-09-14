@@ -1,32 +1,4 @@
-# Scene Mesh Benchmark 配置
 scene-mesh:
-  benchmark:
-    # 默认测试超时时间（毫秒）
-    default-timeout-ms: 30000
-    # 默认重试次数
-    default-retry-count: 0
-    # 默认并发数
-    default-concurrency: 1
-    # 是否启用断言
-    enable-assertion: true
-    # 是否启用性能监控
-    enable-performance-monitoring: false
-    # 测试报告输出路径
-    report-output-path: ./test-reports
-    # 测试数据路径
-    test-data-path: ./test-data
-    # 性能阈值配置
-    performance-threshold:
-      # 最大响应时间（毫秒）
-      max-response-time-ms: 5000
-      # 最大内存使用（MB）
-      max-memory-usage-mb: 512
-      # 最大CPU使用率（百分比）
-      max-cpu-usage-percent: 80.0
-  infrastructure:
-    redis:
-      host: 127.0.0.1
-      port: 6379
   facade:
     url:
       mqtt: mqtt://127.0.0.1:1883

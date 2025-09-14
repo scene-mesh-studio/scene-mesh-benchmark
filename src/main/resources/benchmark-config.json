@@ -1,0 +1,53 @@
+{
+  "id": "test-suite-001",
+  "name": "智能家居场景测试",
+  "productId": "g5mqk3srlb8ikx2v602q7tj6",
+  "secretKey": "123456",
+  "protocol": "WS",
+  "durationOfWaitingActions": 40000,
+  "eventGroups": [
+    {
+      "groupId": "group-001",
+      "name": "正向测试事件组",
+      "mode": "POSITIVE_MATCH",
+      "autoGenerate": false,
+      "inputEvents": [
+        {
+          "type": "chat_text",
+          "payload": {
+            "text": "你有哪些早教知识"
+          }
+        }
+      ]
+    },
+    {
+      "groupId": "group-002",
+      "name": "逆向测试",
+      "mode": "NEGATIVE_MATCH",
+      "autoGenerate": true,
+      "count": 10,
+      "eventTemplate": {
+        "typeSelector": [
+          "rfid_event",
+          "press_event"
+        ],
+        "payloadTemplates": {
+          "rfid_event": {
+            "rfid": "#{randomString(10, 'chinese')}"
+          },
+          "press_event": {
+            "position": "#{randomFrom(['head','leg'])}",
+            "level": "#{randomFrom(['high','mid','low'])}"
+          }
+        }
+      }
+    }
+  ],
+  "expectedActionIds": [
+    "axbyqsoi2fc3haam1tewje85",
+    "ulgneracrnc7m043qtq75efz",
+    "q5d4mvx5ny6sq5e433o884y6",
+    "azut597xjedlphxqf3dejfm0",
+    "q77kz4sl64zrlrxzq965xi9q"
+  ]
+}
