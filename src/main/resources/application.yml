@@ -21,7 +21,7 @@ spring:
 # 日志配置
 logging:
   level:
-    com.scene.mesh.benchmark: DEBUG
+    com.scene.mesh.benchmark: INFO
     com.scene.mesh.service: INFO
     com.scene.mesh.model: INFO
   pattern:
